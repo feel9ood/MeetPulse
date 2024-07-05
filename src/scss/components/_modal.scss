@@ -1,0 +1,71 @@
+@use "../abstracts" as *;
+
+.modal-dialog {
+  max-width: 336px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 576px) {
+    max-width: 512px;
+  }
+
+  .modal-content {
+    border-radius: 1.5rem;
+  }
+  .modal-header {
+    gap: 1.5rem;
+    align-items: flex-start;
+    padding: 1.5rem 1.5rem 0.75rem 1.5rem;
+    border: none;
+  }
+  
+  .modal-body {
+    padding: 0.75rem 1.5rem 1.5rem 1.5rem;
+  }
+  
+  .modal-title {
+    color: $black;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .app-download {
+    border-radius: 0;
+    background-color: $white;
+    padding: 0;
+    
+    // &__links {
+    //   @media (max-width:576px) {
+    //     flex-direction: column;
+    //     align-items: flex-start;
+    //   }
+    // }
+
+    &__qr {
+      flex-direction: column;
+      background: $gray-super-pale;
+  
+      @media (max-width:768px) {
+        display: flex;
+      }
+  
+      @media (max-width:576px) {
+        display: none;
+      }
+
+    }
+
+    &__qr-link {
+      background: $white url(../img-content/qr-code.gif) center center;
+      background-size: 80%;
+      background-repeat: no-repeat;
+    }
+
+    &__link {
+      background: $gray-super-pale;
+    }
+  }
+}

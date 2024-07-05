@@ -1,0 +1,14 @@
+.event-banner {
+  width: 100%;
+  aspect-ratio: 3/1;
+  border-radius: 1.5rem;
+  background-image: url("../img-content/event-banner.jpg");
+  background-size: cover;
+  background-position: center center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+
+  @media (max-width:768px) {
+    aspect-ratio: 3/2;
+  }
+}

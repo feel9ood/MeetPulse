@@ -1,0 +1,26 @@
+@use "../../abstracts" as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100lvh;
+}
+
+.section-error {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  &__text {
+    text-align: center;
+  }
+
+  &__title {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    margin-bottom: 0.5rem;
+  }
+}

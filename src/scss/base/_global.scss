@@ -1,0 +1,95 @@
+@use "../abstracts" as *;
+
+body {
+  // display: flex;
+  // flex-direction: column;
+  // height: 100%;
+  // min-height: 100lvh;
+  // min-width: 320px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-content {
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    padding-bottom: 1.5rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.375rem;
+    padding-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    padding-bottom: 0.5rem;
+  }
+
+  a {
+    display: block;
+    color: $magenta;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    padding-bottom: 0.25rem;
+    text-decoration: none;
+  }
+
+  b {
+    display: inline-block;
+  }
+
+  figure {
+    margin: 0;
+    padding: 1.5rem 0;
+
+    img {
+      width: 100%;
+      aspect-ratio: 736 / 492;
+      border-radius: 1.5rem;
+      object-fit: cover;
+    }
+
+    figcaption {
+      padding-top: 0.5rem;
+      color: $gray-pale;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.375rem;
+    }
+  }
+}

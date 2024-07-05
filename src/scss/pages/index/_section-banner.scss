@@ -1,0 +1,66 @@
+@use "../../abstracts" as *;
+
+.section-banner {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+  }
+
+  &__banner {
+    flex: 1 1 100%;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+  }
+
+  .banner-text {
+    background-color: $magenta;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    color: $white;
+
+    &__text {
+      margin-bottom: 1.5rem;
+      
+      @media (min-width:768px) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-box;
+        -moz-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        line-clamp: 3;
+        box-orient: vertical;
+      }
+    }
+
+    @media (max-width: 991px) {
+      order: 2;
+    }
+  }
+
+  .banner-img {
+    position: relative;
+    background-color: $gray-super-pale;
+
+    @media (max-width: 991px) {
+      order: 1;
+      flex-basis: 256px;
+      overflow-x: clip;
+    }
+
+    &__img {
+      position: absolute;
+      top: -9%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 408px;
+      height: 304px;
+    }
+  }
+}

@@ -1,0 +1,258 @@
+@use "../abstracts" as *;
+
+.events-filters input#datePicker {
+  display: none;
+}
+
+.events-filters .air-datepicker {
+  grid-template-areas: "nav" "buttons" "body" "timepicker";
+  width: 100%;
+  height: 100%;
+  padding: 0 1rem;
+  font-family: 'Nunito', sans-serif;
+  color: $black;
+  border: none;
+  box-sizing: border-box;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375rem;
+  padding-bottom: 0.5rem;
+}
+
+.events-filters .air-datepicker .air-datepicker-cell {
+  z-index: 0;
+}
+
+.events-filters .air-datepicker .air-datepicker-cell.-day-:nth-child(7n)::before {
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+
+}
+
+.events-filters .air-datepicker .air-datepicker-cell.-day-:nth-child(7n + 1)::before {
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+  right: -50%;
+}
+
+.events-filters .air-datepicker .air-datepicker-cell.-day-.-range-from-:nth-child(7n)::before {
+  display: none;
+
+}
+.events-filters .air-datepicker .air-datepicker-cell.-day-.-range-to-:nth-child(7n + 1)::before {
+  display: none;
+}
+
+
+.events-filters .air-datepicker .air-datepicker-cell.-selected-.-day-.-range-to-:nth-child(7n)::before {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.events-filters .air-datepicker .air-datepicker-cell.-selected-.-day-.-range-from-:nth-child(7n + 1)::before {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  right: 0;
+}
+
+
+.events-filters .air-datepicker .air-datepicker-cell.-focus-.-day-.-range-to-:nth-child(7n)::before {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.events-filters .air-datepicker .air-datepicker-cell.-focus-.-day-.-range-from-:nth-child(7n + 1)::before {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  right: 0;
+}
+.events-filters .air-datepicker .air-datepicker-cell.-focus-.-selected--day-.-range-to-:nth-child(7n)::before {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.events-filters .air-datepicker .air-datepicker-cell.-focus-.-selected--day-.-range-from-:nth-child(7n + 1)::before {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  right: 0;
+}
+
+.events-filters .air-datepicker-nav {
+  padding: 0;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+.events-filters .air-datepicker--content {
+  padding: 0;
+  overflow: hidden;
+}
+
+.events-filters .air-datepicker--buttons {
+  margin-bottom: 1rem;
+  padding: 0;
+}
+
+.events-filters .air-datepicker-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.events-filters .air-datepicker-button {
+  display: inline-flex;
+  color: $black;
+  border-radius: 1rem;
+  cursor: pointer;
+  padding: 4px 12px;
+  border: none;
+  background: $gray-super-pale;
+  
+  &:hover {
+    color: $black;
+    background: $gray-super-pale;
+  }
+}
+
+
+.air-datepicker-nav--title {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+  padding-bottom: 0.5rem;
+}
+
+.events-filters .air-datepicker-body--cells.-days- {
+  grid-template-columns: repeat(7, 32px);
+  grid-auto-rows: 32px;
+  gap: 10px;
+}
+
+.events-filters .air-datepicker-body--day-names {
+  display: none;
+}
+
+.events-filters .air-datepicker-cell.-day- {
+  border-radius: 2rem;
+}
+
+.events-filters .air-datepicker-cell.-selected- {
+  border-radius: 2rem;
+  color: $black;
+  background: $magenta-pale;
+}
+
+.events-filters .air-datepicker-cell.-selected-.-current- {
+  color: $black;
+  background: $magenta-pale;
+}
+
+.events-filters .air-datepicker-cell.-range-from-,
+.events-filters .air-datepicker-cell.-range-to- {
+  border: none;
+  z-index: 5;
+}
+
+.events-filters .air-datepicker-cell.-range-from-,
+.events-filters .air-datepicker-cell.-range-to- {
+  color: $black;
+  background: $magenta-pale; 
+  border-color: $magenta-pale; 
+}
+
+.events-filters .air-datepicker-cell.-day-.-focus-.-range-to- {
+  color: $black;
+  background: $magenta-pale;  
+  border-color: $magenta-pale;
+}
+
+
+.events-filters .air-datepicker-cell.-day-.-range-from-::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  content: '';
+  width: 81%;
+  height: 100%;
+  background: #FFDAE2;
+}
+.events-filters .air-datepicker-cell.-day-.-range-to-::before {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  content: '';
+  width: 81%;
+  height: 100%;
+  background: #FFDAE2;
+}
+.events-filters .air-datepicker-cell.-day-.-selected-.-range-from-.-range-to- {
+  color: $black;
+  background: $magenta-pale;
+  border-radius: 2rem;
+}
+
+.events-filters .air-datepicker-cell.-day-.-selected-.-range-from-.-range-to-::before {
+  display: none;
+}
+
+.events-filters .air-datepicker-cell.-day-.-selected-.-focus-.-range-from-,
+.events-filters .air-datepicker-cell.-day-.-selected-.-focus-.-range-to- {
+  color: $black;
+  background: $magenta-pale;  
+  border-color: $magenta-pale;
+}
+
+.events-filters .air-datepicker-cell.-in-range- {
+  background: $magenta-super-pale;
+}
+
+.events-filters .air-datepicker-cell.-in-range-:hover,
+.events-filters .air-datepicker-cell.-in-range-.-focus- {
+  background: $magenta-pale;
+}
+
+
+.events-filters .air-datepicker-cell.-day- span {
+  position: relative;
+  z-index: 2;
+}
+.events-filters .air-datepicker-cell.-day-.-range-from- span,
+.events-filters .air-datepicker-cell.-day-.-range-to- span {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $magenta-pale;  
+  border-color: $magenta-pale;
+  border-radius: 100%;
+}
+.events-filters .air-datepicker-cell.-day-.-in-range-::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  content: '';
+  width: 150%;
+  height: 100%;
+  background: #FFDAE2;
+}
+
+.events-filters .air-datepicker-cell.-current-,
+.events-filters .air-datepicker-cell.-current-.-in-range- {
+  color: $magenta;
+}
+
+
+.events-filters .air-datepicker--buttons,
+.events-filters .air-datepicker--time {
+  border: none;
+}
+
+
+
+.events-filters .air-datepicker-nav--action {
+  width: 52px;
+  height: 52px;
+  border-radius: 2rem;
+  background-color: $gray-super-pale;
+}
+
+.events-filters .air-datepicker-nav--action path {
+  stroke: $black;
+}

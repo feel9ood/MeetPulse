@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+
+  {{> template/head }}
+
+<body>
+  {{> template/header }}
+  <section class="section-collection-list container">
+    <h1>Подборки</h1>
+    
+    {{> collection/collection-list }}
+    {{> template/pagination }}
+  </section>
+  
+  {{> template/app-download }}
+
+  {{> template/footer }}
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

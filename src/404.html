@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+  {{> template/head }}
+
+<body>
+  
+  <div class="wrapper">
+
+    {{> template/header }}
+
+    <div class="section-error container">
+      <img class="section-error__img" src="./img/error-img.png" alt="404">
+      <div class="section-error__text">
+        <h1 class="section-error__title">404</h1>
+        <p class="section-error__subtitle">Вы ищите страницу, которую не существует</p>
+      </div>
+      <a class="section-error__link btn-main" href="/index.html">ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
+    </div>
+
+    {{> template/footer }}
+    
+  </div>
+
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

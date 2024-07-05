@@ -1,0 +1,18 @@
+@use "../../abstracts" as *;
+
+
+.section-collection-list {
+  .collection-list {
+    padding-bottom: 2rem;
+  }
+  h1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.pagination {
+  @media (max-width:768px) {
+    display: none;
+  }
+}

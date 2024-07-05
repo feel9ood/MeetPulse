@@ -1,0 +1,115 @@
+<div class="events-filters">
+  <div class="dropdown dropdown-filter-event">
+    <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+      aria-expanded="false" data-bs-offset="0,8">
+      Жанр
+    </button>
+    <ul class="dropdown-menu dropdown-event-body">
+      <li><a class="dropdown-item" href="#">Выставки</a></li>
+      <li><a class="dropdown-item" href="#">Концерты</a></li>
+      <li><a class="dropdown-item" href="#">Спектакли</a></li>
+      <li><a class="dropdown-item" href="#">Вечеринки</a></li>
+      <li><a class="dropdown-item" href="#">Кино</a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li>
+        <div class="dropdown-btn-wrap">
+          <button class="dropdown-item btn-main">Применить</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="dropdown dropdown-filter-event">
+    <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+      aria-expanded="false" data-bs-offset="0,8">
+      Дата&nbsp;
+      <span id="datePickerResult" class="dropdown-filter-event__result"></span>
+    </button>
+    <div class="dropdown-menu dropdown-event-body">
+      <input id="datePicker" type="text">
+      <hr class="dropdown-divider">
+    </div>
+  </div>
+  <div class="dropdown dropdown-filter-event timer-filter">
+    <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+      aria-expanded="false" data-bs-offset="0,8">
+      Время
+      <span class="dropdown-filter-event__result timer-selected"></span>
+      <input type="hidden" name="timer" class="timer-input">
+    </button>
+    <div class="dropdown-menu dropdown-event-body">
+      <div class="dropdown-event-body__buttons dropdown-event-buttons">
+        <button class="dropdown-event-buttons__button timer-morning"><span tabindex="-1">Утром</span></button>
+        <button class="dropdown-event-buttons__button timer-day"><span tabindex="-1">Днем</span></button>
+        <button class="dropdown-event-buttons__button timer-evening"><span tabindex="-1">Вечером</span></button>
+      </div>
+      <div class="dropdown-event-body__time dropdown-event-time">
+        <div class="dropdown-event-time__container">
+          <div class="dropdown-event-time__item">
+            <button class="dropdown-event-time__button btn-main btn-round timer-start-inc">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 11L8 5L14 11" stroke="black" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <span class="dropdown-event-time__value timer-start">9:00</span>
+            <button class="dropdown-event-time__button btn-main btn-round timer-start-dec">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 5L8 11L2 5" stroke="black" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="dropdown-event-time__item">
+            <button class="dropdown-event-time__button btn-main btn-round timer-end-inc">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 11L8 5L14 11" stroke="black" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <span class="dropdown-event-time__value timer-end">23:00</span>
+            <button class="dropdown-event-time__button btn-main btn-round timer-end-dec">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 5L8 11L2 5" stroke="black" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <hr class="dropdown-divider">
+      <div class="dropdown-btn-wrap">
+        <button class="btn-main timer-reset">СБРОСИТЬ</button>
+        <button class="btn-main btn-magenta timer-apply">ПРИМЕНИТЬ</button>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown dropdown-filter-event value-slider">
+    <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+      aria-expanded="false" data-bs-offset="0,8">
+      Цена&nbsp;
+      <span id="value-range-text" class="dropdown-filter-event__result"></span>
+    </button>
+    <div class="dropdown-menu dropdown-event-body">
+      <div class="value-slider__container">
+        <div class="value-slider__input-wrap">
+          <input type="number" id="min-value" value="0" min="0" max="30000">
+          <input type="number" id="max-value" value="30000" min="0" max="30000">
+        </div>
+        <div class="value-slider__slider">
+          <div class="slider-track"></div>
+          <div class="slider-range"></div>
+          <input type="range" id="range-min" min="0" max="30000" value="0">
+          <input type="range" id="range-max" min="0" max="30000" value="30000">
+        </div>
+      </div>
+      <hr class="dropdown-divider">
+
+      <div class="dropdown-btn-wrap">
+        <button class="btn-main" id="reset">СБРОСИТЬ</button>
+        <button class="btn-main btn-magenta" id="apply" disabled>ПРИМЕНИТЬ</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+@use "../../abstracts" as *;
+
+.collection-list {
+
+  &__more {
+    display: none;
+
+    @media (max-width:768px) {
+      display: block;
+    }
+
+    .btn-main {
+      width: 100%;
+    }
+  }
+}

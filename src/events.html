@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+
+  {{> template/head }}
+
+<body>
+  {{> template/header }}
+  <section class="section-events-list container">
+    <h1>События</h1>
+    
+    {{> events/events-filters }}
+    
+    {{> events/events-list }}
+    {{> template/pagination }}
+  </section>
+  
+  {{> template/app-download }}
+
+  {{> template/footer }}
+  <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

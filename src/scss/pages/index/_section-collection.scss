@@ -1,0 +1,250 @@
+@use "../../abstracts" as *;
+
+.section-collection {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.collection-list {
+  &__header {
+    margin-bottom: 2rem;
+  }
+
+  &__header-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title-wrap {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 600px;
+    align-items: center;
+
+    @media (max-width:768px) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__group-sm {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;    
+    margin-bottom: 1.5rem;
+
+    @media (max-width:768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width:768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__group-lg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @media (max-width:768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+
+  // .collection-card-lg {
+
+  //   &__img-wrapper {
+  //     position: relative;
+  //     max-height: 346px;      
+  //     border-radius: 1.5rem;
+  //     overflow: hidden;
+  //     margin-bottom: 0.5rem;
+
+  //     &__img {
+  //       position: absolute;
+  //       top: 0;
+  //       left: 0;
+  //       display: block;
+  //       width: 100%;
+  //       min-height: 100%;
+  //       transition: transform .3s ease;
+  //       object-fit: cover;
+
+  //       &:hover {
+  //         transform: scale(1.05);
+  //       }
+  //     }
+  //     &:before {
+  //       content: "";
+  //       display: block;
+  //       padding-top: 66,667%;
+  //     }
+  //   }
+
+
+  //   &__title {
+  //     display: block;
+  //     color: $white;
+  //     font-size: 1.5rem;
+  //     line-height: 2rem;
+  //     font-weight: 700;
+  //   }
+  // }
+
+
+
+
+
+  .collection-card-lg {
+    position: relative;
+
+    &:hover .collection-card-lg__img {
+      transform: scale(1.05);
+    }
+    
+    &__img-wrapper {
+      position: relative;
+      height: 364px;
+      border-radius: 1.5rem;
+      overflow: hidden;
+
+      @media (max-width:768px) {
+        height: 224px;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 66, 6667%;
+      }
+      
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      min-height: 100%;
+      transition: transform .3s ease;
+      object-fit: cover;
+      z-index: 1;
+
+      // &:hover {
+      //   transform: scale(1.05);
+      // }
+    }
+
+
+    &__link {
+      position: absolute;
+      top: auto;
+      left: 1.5rem;
+      right: 1.5rem;
+      bottom: 1.5rem;
+      display: block;
+      padding: 0;
+      color: $white;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 700;
+      text-decoration: none;
+      z-index: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -moz-box;
+      -moz-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      line-clamp: 4;
+      box-orient: vertical;
+      z-index: 2;
+    }
+
+    &__date {
+      display: block;
+      color: $gray;
+      font-size: 1rem;
+      line-height: 1.375rem;
+      font-weight: 400;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .collection-card {
+    position: relative;
+
+    &__img-wrapper {
+      position: relative;
+      max-height: 261px;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      margin-bottom: 0.5rem;
+
+      @media (max-width:768px) {
+        max-height: 162px;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+    }
+
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      min-height: 100%;
+      transition: transform .3s ease;
+      object-fit: cover;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &__title {
+      display: block;
+      color: $black;
+      font-size: 1.125rem;
+      line-height: 1.5rem;
+      font-weight: 700;
+      transition: color 0.1s;
+      text-decoration: none;
+
+      &:hover {
+        color: $magenta;
+      }
+    }
+
+    &__date {
+      display: block;
+      color: $gray;
+      font-size: 1rem;
+      line-height: 1.375rem;
+      font-weight: 400;
+      margin-bottom: 0.25rem;
+    }
+  }
+}

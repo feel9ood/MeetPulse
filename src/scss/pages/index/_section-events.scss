@@ -1,0 +1,150 @@
+@use "../../abstracts" as *;
+
+.section-events {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.slider-events {
+  &__header {
+    margin-bottom: 2rem;
+  }
+
+  &__header-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title-wrap {
+    display: flex;
+    gap: 1.5rem;
+    max-width: 600px;
+    align-items: center;
+
+    @media (max-width:768px) {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  &__nav-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+}
+.event-card {
+  position: relative;
+  // max-width: 22.25rem;
+
+  &__img-wrapper {
+    position: relative;
+    max-height: 237px;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+
+    &:before {
+      content: "";
+      display: block;
+      padding-top: 66.8947%;
+    }
+
+    // &:after {
+    //   content: "";
+    //   display: block;
+    //   position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   top: 0;
+    //   left: 0;
+    //   background-color: rgba(0, 0, 0, 0.1);
+    // }
+  }
+
+  &__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    transition: transform .3s ease;
+    object-fit: cover;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__favorite-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+  }
+
+  &__title {
+    color: $black;
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    transition: color 0.1s;
+    text-decoration: none;
+
+    &:hover {
+      color: $magenta;
+    }
+  }
+
+  &__details {
+    color: $gray;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+  }
+
+  &__price {
+    color: $black;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+  }
+}
+
+.slider-events-md {
+  .event-card {
+    width: 356px;
+    @media (max-width:768px) {
+      width: 320px;
+    }
+  }
+}
+
+.slider-events-sm {
+  .event-card {
+    width: 261px;
+
+    &__img-wrapper {
+      max-height: 261px;
+
+      &:before {
+        padding-top: 100%;
+      }
+    }
+  }
+}
+
+.slider-events .swiper-slide {
+  display: inline-flex;
+  max-width: -moz-min-content;
+  max-width: max-content;
+}

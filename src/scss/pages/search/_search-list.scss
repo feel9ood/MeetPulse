@@ -1,0 +1,35 @@
+@use "../../abstracts" as *;
+
+.search-list {
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+
+    @media (max-width:768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .event-card {
+      .event-card__img-wrapper:before {
+        @media (max-width:768px) {
+          padding-top: 100%;
+        }
+      }
+    }
+  }
+
+  &__more {
+    display: none;
+
+    @media (max-width:768px) {
+      display: block;
+    }
+
+    .btn-main {
+      width: 100%;
+    }
+  }
+}
