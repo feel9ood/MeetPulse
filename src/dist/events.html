@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://api-maps.yandex.ru/v3/?apikey=c27b144f-d856-471a-a4bd-8d14fa1169d9&lang=ru_RU"></script>
-    <title>MeetPulse</title>
-    <script type="module" crossorigin src="./assets/main-qq2glr5-.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-BFi5MViz.css">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://api-maps.yandex.ru/v3/?apikey=c27b144f-d856-471a-a4bd-8d14fa1169d9&lang=ru_RU"></script>
+  <title>MeetPulse</title>
+  <script type="module" crossorigin src="./assets/main-qq2glr5-.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-BFi5MViz.css">
+</head>
+
 <body>
   <header class="section-header">
     <div class="section-header__wrap">
@@ -33,9 +34,9 @@
         </div>
         <div class="section-header__navigation header-navigation">
           <nav class="header-navigation__menu">
-            <a class="header-navigation__link" href="/events.html">СОБЫТИЯ</a>
-            <a class="header-navigation__link" href="/places.html">МЕСТА</a>
-            <a class="header-navigation__link" href="/collection.html">ПОДБОРКИ</a>
+            <a class="header-navigation__link" href="./events.html">СОБЫТИЯ</a>
+            <a class="header-navigation__link" href="./places.html">МЕСТА</a>
+            <a class="header-navigation__link" href="./collection.html">ПОДБОРКИ</a>
           </nav>
         </div>
         <div class="section-header__city header-navigation">
@@ -52,7 +53,7 @@
               <li><a class="header-navigation__link" href="">Казань</a></li>
             </ul>
           </div>
-          <a href="/search.html" class="header-navigation__search-link btn-main btn-round">
+          <a href="./search.html" class="header-navigation__search-link btn-main btn-round">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="6.5" cy="6.5" r="5.5" stroke="black" stroke-width="2" />
               <path d="M11 11L15 15" stroke="black" stroke-width="2" stroke-linecap="round" />
@@ -60,8 +61,9 @@
           </a>
           <!-- Мобильное меню -->
           <nav class="navbar">
-            <button class="header-navigation__mobile-menu-btn btn-main btn-round" type="button" data-bs-toggle="offcanvas"
-              data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <button class="header-navigation__mobile-menu-btn btn-main btn-round" type="button"
+              data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+              aria-label="Toggle navigation">
               <div class="icons">
                 <svg class="burger" width="16" height="16" viewBox="0 0 16 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
@@ -85,9 +87,9 @@
       <div class="header-navigation__menu-mobile">
         <div class="container">
           <nav>
-            <a class="header-navigation__link" href="/events.html">СОБЫТИЯ</a>
-            <a class="header-navigation__link" href="/places.html">МЕСТА</a>
-            <a class="header-navigation__link" href="/collection.html">ПОДБОРКИ</a>
+            <a class="header-navigation__link" href="./events.html">СОБЫТИЯ</a>
+            <a class="header-navigation__link" href="./places.html">МЕСТА</a>
+            <a class="header-navigation__link" href="./collection.html">ПОДБОРКИ</a>
           </nav>
         </div>
       </div>
@@ -105,13 +107,14 @@
         </div>
       </div>
     </div>
-  </header>  <section class="section-events-list container">
+  </header>
+  <section class="section-events-list container">
     <h1>События</h1>
-    
+
     <div class="events-filters">
       <div class="dropdown dropdown-filter-event dropdown-radio-select">
-        <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-          aria-expanded="false" data-bs-offset="0,8">
+        <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown"
+          data-bs-auto-close="outside" aria-expanded="false" data-bs-offset="0,8">
           Жанр&nbsp;
           <span id="dropdownPickResult" class="dropdown-filter-event__result dropdown-pick-result"></span>
         </button>
@@ -158,8 +161,8 @@
         </ul>
       </div>
       <div class="dropdown dropdown-filter-event">
-        <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-          aria-expanded="false" data-bs-offset="0,8">
+        <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown"
+          data-bs-auto-close="outside" aria-expanded="false" data-bs-offset="0,8">
           Дата&nbsp;
           <span id="datePickerResult" class="dropdown-filter-event__result"></span>
         </button>
@@ -170,8 +173,8 @@
         </div>
       </div>
       <div class="dropdown dropdown-filter-event timer-filter">
-        <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-          aria-expanded="false" data-bs-offset="0,8">
+        <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown"
+          data-bs-auto-close="outside" aria-expanded="false" data-bs-offset="0,8">
           Время
           <span class="dropdown-filter-event__result timer-selected"></span>
           <input type="hidden" name="timer" class="timer-input">
@@ -224,8 +227,8 @@
         </div>
       </div>
       <div class="dropdown dropdown-filter-event value-slider">
-        <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
-          aria-expanded="false" data-bs-offset="0,8">
+        <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown"
+          data-bs-auto-close="outside" aria-expanded="false" data-bs-offset="0,8">
           Цена&nbsp;
           <span id="value-range-text" class="dropdown-filter-event__result"></span>
         </button>
@@ -243,14 +246,14 @@
             </div>
           </div>
           <hr class="dropdown-divider">
-    
+
           <div class="dropdown-btn-wrap">
             <button class="btn-main" id="reset">СБРОСИТЬ</button>
             <button class="btn-main btn-magenta" id="apply" disabled>ПРИМЕНИТЬ</button>
           </div>
         </div>
       </div>
-    </div>    
+    </div>
     <div class="events-list">
       <div class="events-list__list">
         <div class="event-card">
@@ -268,7 +271,8 @@
                 fill="white" mask="url(#path-1-inside-1_2701_18466)" />
             </svg>
           </button>
-          <a href="/event-item.html" class="event-card__title">«Media art: искусство на грани». Лекция Кати Михатовой</a>
+          <a href="./event-item.html" class="event-card__title">«Media art: искусство на грани». Лекция Кати
+            Михатовой</a>
           <p class="event-card__details">19 мар в 20:00 · Interactive Space</p>
           <span class="event-card__price">от 1500 ₽</span>
         </div>
@@ -371,7 +375,8 @@
       <div class="events-list__more">
         <button class="btn-main">Показать еще</button>
       </div>
-    </div>    <nav class="pagination container">
+    </div>
+    <nav class="pagination container">
       <ul class="pagination-list">
         <li class="pagination-item pagination-item--arrow-prev pagination-item--disabled">
           <a href="">
@@ -413,8 +418,9 @@
           </a>
         </li>
       </ul>
-    </nav>  </section>
-  
+    </nav>
+  </section>
+
   <section class="section-app-download container">
     <div class="app-download">
       <div class="app-download__main">
@@ -557,7 +563,7 @@
         </div>
       </div>
     </div>
-  </footer>  
+  </footer>
 </body>
 
 </html>
