@@ -1,21 +1,48 @@
-<div class="places-filters">
-  <div class="dropdown dropdown-filter-event">
+<div class="events-filters">
+  <div class="dropdown dropdown-filter-event dropdown-radio-select">
     <button class="btn btn-main dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside"
       aria-expanded="false" data-bs-offset="0,8">
-      Категория
+      Категории&nbsp;
+      <span id="dropdownPickResult" class="dropdown-filter-event__result dropdown-pick-result"></span>
     </button>
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Выставки</a></li>
-      <li><a class="dropdown-item" href="#">Концерты</a></li>
-      <li><a class="dropdown-item" href="#">Спектакли</a></li>
-      <li><a class="dropdown-item" href="#">Вечеринки</a></li>
-      <li><a class="dropdown-item" href="#">Кино</a></li>
+    <ul class="dropdown-menu dropdown-event-body">
+      <li class="dropdown-event-body__radio-item">
+        <input id="exhibition" type="radio" name="genre" value="Выставки">
+        <label class="dropdown-item" for="exhibition">
+          Выставки
+        </label>
+      </li>
+      <li class="dropdown-event-body__radio-item">
+        <input id="concert" type="radio" name="genre" value="Концерты">
+        <label class="dropdown-item" for="concert">
+          Концерты
+        </label>
+      </li>
+      <li class="dropdown-event-body__radio-item">
+        <input id="spectacle" type="radio" name="genre" value="Спектакли">
+        <label class="dropdown-item" for="spectacle">
+          Спектакли
+        </label>
+      </li>
+      <li class="dropdown-event-body__radio-item">
+        <input id="party" type="radio" name="genre" value="Вечеринки">
+        <label class="dropdown-item" for="party">
+          Вечеринки
+        </label>
+      </li>
+      <li class="dropdown-event-body__radio-item">
+        <input id="movie" type="radio" name="genre" value="Кино">
+        <label class="dropdown-item" for="movie">
+          Кино
+        </label>
+      </li>
       <li>
         <hr class="dropdown-divider">
       </li>
       <li>
         <div class="dropdown-btn-wrap">
-          <button class="dropdown-item btn-main">Применить</button>
+          <button class="dropdown-item btn-main dropdown-btn-reset">Сбросить</button>
+          <button class="dropdown-item btn-main btn-magenta dropdown-btn-apply">Применить</button>
         </div>
       </li>
     </ul>

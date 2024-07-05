@@ -141,6 +141,11 @@
       &:active {
         background-color: $magenta;
       }
+
+      &:hover {
+        color: $white;
+        background-color: $magenta-dark;
+      }
     }
 
     .dropdown-divider {
@@ -165,9 +170,8 @@
       }
     }
 
-    .dropdown-btn-apply {
+    .dropdown-btn-apply {}
 
-    }
     .dropdown-btn-apply:disabled {
       background-color: $gray-super-pale;
       color: $gray-pale;
@@ -176,13 +180,12 @@
     .dropdown-btn-reset {
       display: none;
     }
+
     .dropdown-btn-reset.show {
       display: flex;
     }
-  
-    button
-  
-    button:active {
+
+    button button:active {
       background-color: $gray-pale;
     }
   }
@@ -208,7 +211,7 @@
     }
 
     &__radio-item {
-      
+
       label {
         cursor: pointer;
         position: relative;
